@@ -24,38 +24,35 @@
 package graphvisualizer.graphview;
 
 /**
- * A stylable node can have its css properties changed at runtime.
- * <br>
- * All Java FX nodes used by {@link SmartGraphPanel} to represent graph entities
- * should implement this interface.
- * 
+ * A stylable node can have its css properties changed at runtime. <br>
+ * All Java FX nodes used by {@link SmartGraphPanel} to represent graph entities should implement
+ * this interface.
+ *
  * @see SmartGraphPanel
- * 
  * @author brunomnsilva
  */
-public interface SmartStylableNode {    
-    
-    /**
-     * Applies cumulatively the <code>css</code> styles to the node.
-     * 
-     * Note that JavaFX styles are cumulative.
-     * 
-     * @param css styles
-     */
-    public void setStyle(String css);
-    
-    /**
-     * Applies the CSS styling defined in class selector <code>cssClass</code>.
-     * 
-     * The <code>cssClass</code> string must not contain a preceding dot, e.g.,
-     * "myClass" instead of ".myClass".
-     * 
-     * The CSS Class must be defined in <code>smartpgraph.css</code> file.
-     * 
-     * The expected behavior is to remove  all current styling before 
-     * applying the class css.
-     * 
-     * @param cssClass name of the CSS class.
-     */
-    public void setStyleClass(String cssClass);
+public interface SmartStylableNode {
+
+  /**
+   * Applies cumulatively the <code>css</code> styles to the node.
+   *
+   * <p>Note that JavaFX styles are cumulative.
+   *
+   * @param css styles
+   */
+  public void setStyle(String css);
+
+  /**
+   * Applies the CSS styling defined in class selector <code>cssClass</code>.
+   *
+   * <p>The <code>cssClass</code> string must not contain a preceding dot, e.g., "myClass" instead
+   * of ".myClass".
+   *
+   * <p>The CSS Class must be defined in <code>smartpgraph.css</code> file.
+   *
+   * <p>The expected behavior is to remove all current styling before applying the class css.
+   *
+   * @param cssClass name of the CSS class.
+   */
+  public void setStyleClass(String cssClass);
 }

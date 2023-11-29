@@ -23,26 +23,22 @@
  */
 package graphvisualizer.containers;
 
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Menu;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import graphvisualizer.graphview.SmartGraphPanel;
+import javafx.scene.layout.BorderPane;
 
 /**
- *
  * @author Bruno Silva
  */
 public class SmartGraphDemoContainer extends BorderPane {
-    private MenuPane menu;
+  private MenuPane menu;
 
-    public SmartGraphDemoContainer(SmartGraphPanel graphView) {
-        setCenter(new ContentResizerPane(graphView));
-        menu = new MenuPane();
-        setRight(menu);
-    }
+  public SmartGraphDemoContainer(SmartGraphPanel graphView) {
+    setCenter(new ContentResizerPane(graphView));
+    menu = new MenuPane();
+    setRight(menu);
+  }
 
-    public MenuPane getMenu() {
-        return menu;
-    }
+  public MenuPane getMenu() {
+    return menu;
+  }
 }
