@@ -26,29 +26,25 @@ package graphvisualizer.graphview;
 import javafx.scene.text.Text;
 
 /**
- * A label contains text and can be attached to any {@link SmartLabelledNode}.
- * <br>
- * This class extends from {@link Text} and is allowed any corresponding
- * css formatting.
- * 
+ * A label contains text and can be attached to any {@link SmartLabelledNode}. <br>
+ * This class extends from {@link Text} and is allowed any corresponding css formatting.
+ *
  * @author Bruno Silva
  */
 public class SmartLabel extends Text implements SmartStylableNode {
 
-    public SmartLabel() {
-    }
+  public SmartLabel() {}
 
-    public SmartLabel(String text) {
-        super(text);
-    }
+  public SmartLabel(String text) {
+    super(text);
+  }
 
-    public SmartLabel(double x, double y, String text) {
-        super(x, y, text);
-    }
-    
-    @Override
-    public void setStyleClass(String cssClass) {
-        getStyleClass().add(cssClass);
-    }
-    
+  public SmartLabel(double x, double y, String text) {
+    super(x, y, text);
+  }
+
+  @Override
+  public void setStyleClass(String cssClass) {
+    getStyleClass().add(cssClass);
+  }
 }
